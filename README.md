@@ -3,16 +3,15 @@
 ![image info](HexagonalSchemaWithLabels.png)
 
 # run
-- under the ../hexagonal_part2 directory write the following command  go run ./cmd/main.go
+- Under the ../hexagonal_part2 directory write the following command  go run ./cmd/main.go
 
 ![image info](Gocommand.png)
 
-- response :
+- Response :
 
 ![image info](GocommandResponse.png)
 
-- explanation
-
+- Explanation
 
 ```mermaid
 sequenceDiagram
