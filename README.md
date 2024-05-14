@@ -9,7 +9,7 @@
 
 - Response :
 
-![image info](GocommandResponse.png)
+![image info](GoCommandResponse.png)
 
 - Explanation
 
