@@ -23,8 +23,10 @@ participant UserRepository
 Client ->>UserAction : create
 activate UserAction
 UserAction ->>UserRepository : create
+activate UserRepository
 UserRepository -->>UserAction : UserRepository is created
 UserAction ->>UserUseCases : create
+activate UserUseCases
 UserUseCases -->>UserAction : UserUseCases is created
 UserUseCases ->>UserUseCases : adapters plugged in the ports
 Note right of UserUseCases : adapters plugged now only for this example
@@ -37,5 +39,7 @@ UserUseCases ->>UserUseCases : convert business response in technical response
 UserUseCases -->>UserAction : response : list of users in technical format
 UserAction -->>Client : response : list of users in technical format
 deactivate UserAction
+deactivate UserRepository
+deactivate UserUseCases
 
 ```
