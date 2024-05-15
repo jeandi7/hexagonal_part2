@@ -20,6 +20,7 @@ participant UserAction
 participant UserUseCases
 participant UserRepository
 
+Note right of Client : Initialization
 Client ->>UserAction : create
 activate UserAction
 UserAction ->>UserRepository : create
@@ -29,8 +30,9 @@ UserAction ->>UserUseCases : create
 activate UserUseCases
 UserUseCases -->>UserAction : UserUseCases is created
 UserUseCases ->>UserUseCases : adapters plugged in the ports
-Note right of UserUseCases : adapters plugged now only for this example
+Note right of UserUseCases : Adapters plugged now only for this example
 UserAction -->>Client: UserAction is created
+Note right of Client : Use Case
 Client ->>UserAction : technical query : listUsers ?
 UserAction ->>UserUseCases : technical query : listUsers ?
 UserUseCases  ->>UserRepository : business query : list of Domain.Users ?
