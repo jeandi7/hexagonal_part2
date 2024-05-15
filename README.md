@@ -22,8 +22,12 @@ participant UserRepository
 
 Client ->>UserAction : create
 activate UserAction
-UserAction ->>UserAction : adapters plugged in the ports
-Note right of UserAction : adapters plugged now only for this example
+UserAction ->>UserRepository : create
+UserRepository -->>UserAction : UserRepository is created
+UserAction ->>UserUseCases : create
+UserUseCases -->>UserAction : UserUseCases is created
+UserUseCases ->>UserUseCases : adapters plugged in the ports
+Note right of UserUseCases : adapters plugged now only for this example
 UserAction -->>Client: UserAction is created
 Client ->>UserAction : technical query : listUsers ?
 UserAction ->>UserUseCases : technical query : listUsers ?
